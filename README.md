@@ -3,7 +3,8 @@
 ## 1 Introduction
 In this chapter the analysis process is shown using each tool. From importing the data in Excel, transforming it in Python and finally visualizing it in Tableau to find patterns and get insights of the data. 
 ## 2a Importing Data into Excel
- ![image](https://github.com/user-attachments/assets/1e41bf61-b33a-4559-bc7c-453dca5e005e)
+
+![image](https://github.com/user-attachments/assets/1e41bf61-b33a-4559-bc7c-453dca5e005e)
 
 The data contains 13 columns.
 1.	ride_id – This column contains identification number for the bicycle rented
@@ -27,13 +28,15 @@ The data contains 13 columns.
 
 ## 2b Calculating Ride Length
 Creating new column with the name ride_length to calculate the time length of the ride rented by subtracting ended_at (D column) – started_at (C column). 
- ![image](https://github.com/user-attachments/assets/aa8331f4-10e3-4e22-a944-c03ba43f1ea0)
+
+![image](https://github.com/user-attachments/assets/aa8331f4-10e3-4e22-a944-c03ba43f1ea0)
 
 Formatted ride_length as HH:MM:SS to check the duration of the ride.
 
-4.2c Calculating Weekday for the day ride started
+## 2c Calculating Weekday for the day ride started
 Creating new column with the name day_of_week to calculate at which week day do riders rent the bicycle. Calculated using formula =WEEKDAY(C2,2)
- ![image](https://github.com/user-attachments/assets/8b8a5e7d-b3de-4f44-91ed-1050957fa56a)
+
+![image](https://github.com/user-attachments/assets/8b8a5e7d-b3de-4f44-91ed-1050957fa56a)
 
 Formatted as numbers, 1 = Monday - 7 = Sunday. 
 
@@ -46,7 +49,8 @@ It is easy to read and enables one to work with large amount of data easily and 
 For this case, Pandas library is used to clean the dataset. Pandas library is popular python library used for data manipulation and analysis in Python. It excels in tasks such as data cleaning, filtering, transformation, aggregation and merging, making it easier to analyze. Pandas also integrates well with other python libraries and supports various file formats such as CSV, Excel, SQL, JSON, etc. used for data analysis.
 
 ## 3b Importing Dataset
- ![image](https://github.com/user-attachments/assets/ddfdbbc3-db58-4e0d-9d77-96010ecf4d4a)
+
+![image](https://github.com/user-attachments/assets/ddfdbbc3-db58-4e0d-9d77-96010ecf4d4a)
 
 CODE - “import pandas as pd” 
 This code line is used for importing the Pandas library for cleaning and analyzing the data.
@@ -57,13 +61,15 @@ This code line is used to assign dataset to ‘data’ variable to quickly menti
 CODE – “data.info()”
 This code line is used to check the datatypes of columns in the dataset.
 
- ![image](https://github.com/user-attachments/assets/c6852a9a-77d6-4607-a135-bbf46f138a06)
+
+![image](https://github.com/user-attachments/assets/c6852a9a-77d6-4607-a135-bbf46f138a06)
 
 
 CODE – “data.head()”
 This code line is used to print the first 5 rows in the dataset.
 
 ## 3c Formatting the dataset
+
 ![image](https://github.com/user-attachments/assets/dfed8917-8cba-47fa-8504-39c8913396ee)
 
  
@@ -102,36 +108,42 @@ These lines change the numbers to days in words, 1 is replaced by ‘Monday’, 
 
 ## 3d Cleaning the Dataset
 
- ![image](https://github.com/user-attachments/assets/26f1d63d-34ec-45ff-8698-1e6ac70dd991)
+
+![image](https://github.com/user-attachments/assets/26f1d63d-34ec-45ff-8698-1e6ac70dd991)
 
 
 CODE – “data.shape”
 This line is used to check the number of rows and columns in the data. Number of rows in the dataset is 56,67,717 and number of columns in the dataset is 15.
- ![image](https://github.com/user-attachments/assets/6c48751e-2de6-4581-9ec2-4150bfcec585)
+
+![image](https://github.com/user-attachments/assets/6c48751e-2de6-4581-9ec2-4150bfcec585)
 
 
 CODE – “data.isnull().sum(axis = 0)”
 This line is used to check null values in each column.
 
- ![image](https://github.com/user-attachments/assets/3a29e224-06b8-4621-8c37-414596858787)
+
+![image](https://github.com/user-attachments/assets/3a29e224-06b8-4621-8c37-414596858787)
 
 
 CODE – “clean_data = data.dropna()”
 In this line we have assigned new variable to dataset without null values, as we have used ‘dropna’ function to remove the rows with null values.
- ![image](https://github.com/user-attachments/assets/b21366a2-19dd-4a51-8f1b-68e320e56c95)
+
+![image](https://github.com/user-attachments/assets/b21366a2-19dd-4a51-8f1b-68e320e56c95)
 
 
 CODE – “col1 = ['start_station_id', 'end_station_id', 'start_lat', 'start_lng', 'end_lat', 'end_lng']”
 We have assigned col1 variable to number of columns we don’t need.
 CODE – “clean_data.drop(columns=col1, inplace = True)”
 We used ‘drop’ function to remove the columns mentioned above.
+
 ![image](https://github.com/user-attachments/assets/5166a570-ad5f-4612-8026-3196ad05690f)
 
  
 CODE – “clean_data[clean_data.duplicated(['ride_id'])]”
 We used to this line of code to check if there is any duplicate in ‘ride_id’ column. Since there is no duplicate, we don’t have to take any step.
 
- ![image](https://github.com/user-attachments/assets/a88fc4c9-85b9-40ca-af2e-57acd3831ac1)
+
+![image](https://github.com/user-attachments/assets/a88fc4c9-85b9-40ca-af2e-57acd3831ac1)
 
 
 CODE – “clean_data.shape”
@@ -149,6 +161,7 @@ Tableau is software for data visualization and analytics. It allows user to crea
 The reason to use Tableau for this project because it doesn’t require much technical knowledge. The charts and graphs in Tableau make it easy to notice pattern, trends. It also integrates well with other software used in this project such as excel and python. 
 
 ## 4b Bike Type Preference of Members and Casual Riders
+
 ![image](https://github.com/user-attachments/assets/a2497f60-775e-42ec-9e93-2c5ece2f4d4b)
 
  
@@ -163,7 +176,8 @@ As for the casual riders, 20.34% of them prefer classic bikes, 15.90% prefer ele
 
 ## 4c Month Wise Trips of Member and Casual Riders
 
- ![image](https://github.com/user-attachments/assets/fce63ae3-efdb-4337-a82c-732a740de4db)
+
+![image](https://github.com/user-attachments/assets/fce63ae3-efdb-4337-a82c-732a740de4db)
 
 
 Both Casual and Member riders prefer to travel the most during the summer season. The number of trips decline as the winter season approaches. This is likely due to the weather conditions during winter season is not suitable to ride bicycle. 
@@ -181,6 +195,7 @@ The difference here between casual and member riders is that casual rider’s de
 
 
 ## 4d Day wise Trips of Member and Casual Riders
+
 ![image](https://github.com/user-attachments/assets/ec668001-ef3c-46e5-8b9b-75f6e3c40f95)
 
  
@@ -201,6 +216,7 @@ The above chart shows the trip distribution across the weekdays. Casual riders p
 
 
 ## 4e Hour wise Trips of Member and Casual Riders
+
 ![image](https://github.com/user-attachments/assets/ed932d93-9e87-4e02-8cd8-badbe3467cd7)
 
  
@@ -221,7 +237,8 @@ The above line chart shows the trip distribution across the day. Member riders t
 
 ## 4f Ride Length of Member and Casual Riders
 
- ![image](https://github.com/user-attachments/assets/19d4d70f-33d0-43e7-8954-0e7d98bf1e43)
+
+![image](https://github.com/user-attachments/assets/19d4d70f-33d0-43e7-8954-0e7d98bf1e43)
 
 
 This line chart shows the above duration of ride for both member and casual riders. As we can see, member riders most of the travel for about 4 minutes, while the casual members use the bike services for about 7 minutes. Casual riders travel for longer on an average as compared to member riders.
