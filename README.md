@@ -261,13 +261,13 @@ This line chart shows the above duration of ride for both member and casual ride
 This chapter summarizes the findings through the data analysis and provides recommendations to the company for converting casual riders to members. Recommendations includes the marketing strategies the company can plan. The chapter also discusses possible gaps in the data analysis done on the data.
 
 ## 2	Findings
-•	Casual rider and for less trips as compared to Members
-•	Both Members and Casual riders prefer classic bikes over electric bikes
-•	Only Casual riders use docked bikes
-•	Both Casual and Member riders prefer to travel during the spring and summer, however number of trips for casual riders decline quickly after the month of July, as for the member riders, they travel more till the month of September.
-•	Casual rider prefers to travel during weekends, while members travel more during the working days, this could mean member riders use the bike to travel to work, and casual riders use bikes to ride around the area.
-•	Casual riders travel mostly during evening hours, and as for the member riders, they travel during early morning and during evening hours, that is mostly likely to travel TO and FRO from office.
-•	Casual riders travel for longer duration as compared to member riders.
+•	Casual rider and for less trips as compared to Members  
+•	Both Members and Casual riders prefer classic bikes over electric bikes  
+•	Only Casual riders use docked bikes  
+•	Both Casual and Member riders prefer to travel during the spring and summer, however number of trips for casual riders decline quickly after the month of July, as for the member riders, they travel more till the month of September.  
+•	Casual rider prefers to travel during weekends, while members travel more during the working days, this could mean member riders use the bike to travel to work, and casual riders use bikes to ride around the area.  
+•	Casual riders travel mostly during evening hours, and as for the member riders, they travel during early morning and during evening hours, that is mostly likely to travel TO and FRO from office.  
+•	Casual riders travel for longer duration as compared to member riders.  
 
 ## 3	Conclusion
 The Analysis done on the customers travelling data, provides insights such as the date and time of the trips, station names, ride length, day of the travel, rider subscription information. Through the analysis we found out the difference between casual riders and members. 
